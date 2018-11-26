@@ -1,4 +1,3 @@
-
 import android.os.Bundle;
 import ketai.sensors.*;
 //yadda.
@@ -163,6 +162,7 @@ void onCreate(Bundle bundle) {
   getActivity().getWindow().addFlags(android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 }
 int graphX=0;
+boolean firstDraw=true;
 void draw()
 {
   if (kf>.0005) {
@@ -295,7 +295,8 @@ void draw()
     strokeWeight(1);
     rect(i*width/NR, wfy, (i+1)*width/NR-i*width/NR, 0);//+d[i]*0*10000.);
   }
-  filter(scroll);
+  if (!firstDraw) filter(scroll);
+  firstDraw=false;
 }
 
 float dork=0;
