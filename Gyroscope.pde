@@ -1,7 +1,7 @@
 
 import android.os.Bundle;
 import ketai.sensors.*;
-//ya.
+//yadda.
 KetaiSensor sensor;
 float rotationX, rotationY, rotationZ;
 int NR=512;
